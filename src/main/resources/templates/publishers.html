@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Bookshelf - Publishers</title>
+</head>
+<body>
+<h1>Publishers</h1>
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Address</th>
+        <th>City</th>
+        <th>State</th>
+        <th>Zip</th>
+    </tr>
+    <tr th:each="publish: ${publishers}">
+        <td th:text="${publish.name}">Name</td>
+        <td th:text="${publish.address}">Address</td>
+        <td th:text="${publish.city}">City</td>
+        <td th:text="${publish.state}">State</td>
+        <td th:text="${publish.zip}">Zip</td>
+    </tr>
+</table>
+</body>
+</html>
